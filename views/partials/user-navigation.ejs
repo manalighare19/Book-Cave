@@ -1,0 +1,12 @@
+<div class="user_navigation">
+  <a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
+  <a href="/myBooks"><i class="fa fa-heart" aria-hidden="true"></i> My Books</a>
+  <% if (theUser==null) { %>
+    		<a href="/profile/signin"><i class="fa fa-user" aria-hidden="true"></i> Sign In</a>
+  <%}else {%>
+    <form id="form-signOut" method="post" action="/profile/signOut">
+    		<a onclick="document.getElementById('form-signOut').submit();"><i class="fa fa-user" aria-hidden="true"></i> Sign Out</a>
+    </form>
+  <%}%>
+
+</div>

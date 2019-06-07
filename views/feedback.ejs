@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheet/styles.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <title>Feedback</title>
+	</head>
+
+	<body>
+    <% include partials/header.ejs %>
+
+    <% include partials/user-navigation.ejs %>
+
+    <% include partials/site-navigation.ejs %>
+
+    <p class ="box"><%= theItem.description%></p>
+
+    <div class="container">
+      <h2>Give your Rating for</h2>
+      <img src='<%= theItem.imgUrl %>' alt="No image found"/>
+      <h3><strong><%= theItem.itemName %></strong></h3>
+      <h4>by <%= theItem.author %> </h4>
+      <h4><%= theItem.catalogCategory %></h4>
+
+      <h1>Your Rating: </h1>
+    </div>
+
+<form action="/profile/myBooks" method="post">
+  <div class="feedbackRating">
+    <% if(theItem.Rating==5){%>
+      <input type="radio" name="star" id="star1" value=5 checked="checked"><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1><label for="star5"></label>
+    <%}else if(theItem.Rating==4){%>
+      <input type="radio" name="star" id="star1" value=5><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4 checked="checked"><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1><label for="star5"></label>
+    <%}else if(theItem.Rating==3){%>
+      <input type="radio" name="star" id="star1" value=5><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3 checked="checked"><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1><label for="star5"></label>
+    <%}else if(theItem.Rating==2){%>
+      <input type="radio" name="star" id="star1" value=5><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2 checked="checked"><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1><label for="star5"></label>
+    <%}else if(theItem.Rating==1){%>
+      <input type="radio" name="star" id="star1" value=5><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1 checked="checked"><label for="star5"></label>
+    <%}else{%>
+      <input type="radio" name="star" id="star1" value=5><label for="star1"></label>
+      <input type="radio" name="star" id="star2" value=4><label for="star2"></label>
+      <input type="radio" name="star" id="star3" value=3><label for="star3"></label>
+      <input type="radio" name="star" id="star4" value=2><label for="star4"></label>
+      <input type="radio" name="star" id="star5" value=1><label for="star5"></label>
+      <%}%>
+
+    <input type="hidden" name="itemCode" value="<%= theItem.itemCode %>">
+    <input type="hidden" name="catalogCategory" value="<%= theItem.catalogCategory %>">
+    <input type="hidden" name="itemName" value="<%= theItem.itemName %>">
+  </div>
+    <button type="submit" name="action" class=" button-confirmRating" value="updateRating"> Confirm Rating</button>
+
+</form>
+
+
+
+
+    <div class="feedback-buttons">
+
+      <form class="form-ReadIt" action="/profile/myBooks" method="post">
+
+        <input type="hidden" name="itemCode" value="<%= theItem.itemCode %>">
+        <input type="hidden" name="catalogCategory" value="<%= theItem.catalogCategory %>">
+        <input type="hidden" name="itemName" value="<%= theItem.itemName %>">
+        <% if(theItem.ReadIt==true){%>
+          <input type="radio" name="ReadIt" value="Yes" checked="checked">Yes
+          <input type="radio" name="ReadIt" value="No">No
+        <%}else{%>
+          <input type="radio" name="ReadIt" value="Yes">Yes
+          <input type="radio" name="ReadIt" value="No" checked="checked">No
+        <%}%>
+
+        <button class="button-readIt" name="action" value="updateFlag"><i class="fa fa-heart" aria-hidden="true"> </i> Read it</button>
+      </form>
+
+    </div>
+
+    <% include partials/footer.ejs %>
+	</body>
+
+</html>

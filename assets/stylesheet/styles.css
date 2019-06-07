@@ -1,0 +1,540 @@
+.header {
+  Border-style: solid;
+  padding: 0px 0px 0px 16px;
+  Border-width:1px;
+}
+
+.header h1{
+  font-family: 'amatic SC', sans-serif;
+  color: white;
+  font-size:50px;
+  margin-bottom:0px;
+  margin-top:0px;
+  display:inline;
+}
+
+.header h5{
+  font-family: 'Patrick Hand SC',sans-serif ;
+  color: white;
+  font-size:18px;
+  margin-top:0px;
+}
+
+.header h6{
+  font-family: 'Patrick Hand SC',sans-serif ;
+  color: white;
+	text-align:right;
+  font-size:14px;
+  margin-right:20px;
+	margin-top:10px;
+  display:inline;
+  float:right;
+}
+
+.bg-image{
+  background-image: url("https://images.pexels.com/photos/34592/pexels-photo.jpg?cs=srgb&dl=books-bookshelf-encyclopedia-34592.jpg&fm=jpg");
+	background-size: 300px 200px;
+}
+
+.user_navigation {
+  overflow: hidden;
+  background-color: #4d0000;
+  margin-top:1.5px;
+}
+
+.user_navigation a {
+  float: right;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Cousine',sans-serif;
+  font-size: 16px;
+}
+
+.user_navigation a:hover {
+  background-color: white;
+  color: black;
+}
+
+.user_navigation a.active{
+  		background-color: #008EBA;
+  		color: white;
+	}
+
+.site_navigation{
+  font-family: 'Patrick Hand SC',sans-serif;
+  font-size:18px;
+}
+
+.site_navigation ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+	height: 120%;
+  position: absolute;
+  overflow: hidden;
+  margin-top:1.5px;
+  background-color: #f2f2f2;
+}
+
+.site_navigation li a{
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.site_navigation li a:hover{
+  background-color:#4d4d4d;
+  color: white;
+}
+
+.site_navigation a.active{
+  background-color: #008EBA;
+  color: white;
+}
+.footer{
+  position: fixed;
+  left: 10;
+  bottom: 0;
+  width: 100%;
+  background-color: #4d0000;
+  color: white;
+  text-align: left;
+  padding: 0px 0px 0px 16px;
+  font-family: 'Patrick Hand SC',sans-serif;
+  font-size:15px;
+	Border-style: solid;
+  Border-width:1px;
+}
+.main{
+  position: fixed;
+	left: 210px;
+	right:1.5px;
+	color: Black;
+	font-family: 'Patrick Hand SC', sans-serif;
+	font-size:17px;
+	padding:0px 0px 0px 10px;
+}
+
+#description{
+  margin-top:20px;
+  font-size: 20px;
+}
+
+#description::first-letter{
+  font-size: 200%;
+  color:#4d0000;
+}
+.main p{
+  margin-top:260px;
+}
+.category{
+  position: fixed;
+  margin-left: 210px;
+	color: Black;
+	font-family: 'Patrick Hand SC', sans-serif;
+	font-size:17px;
+}
+
+.category th{
+  float: left;
+  font-size: 22px;
+}
+
+.category td{
+  margin-left: 380px;
+}
+
+img{
+  margin-top:25px;
+	margin-bottom:0px;
+	width:150px;
+	height: 200px;
+	margin-left:230px;
+	float:left;
+}
+.container{
+  font-family: 'Patrick Hand SC', sans-serif;
+	color: black;
+  margin-top: 30px;
+}
+
+.container h3{
+  margin-left:400px;
+  margin-bottom:0px;
+	font-size:20px;
+}
+
+.container h5{
+  margin-bottom:0px;
+	margin-top:10px;
+	margin-left:230px;
+	font-family: 'Cousine', sans-serif;
+	font-size:12px;
+}
+.container h2{
+  margin-bottom:0px;
+	margin-left:230px;
+	font-family: 'Cousine', sans-serif;
+	font-size:18px;
+}
+.container h4{
+  margin-left:400px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.container h1{
+  margin-bottom:0px;
+  margin-top:10px;
+  margin-left:20px;
+  font-size:15px;
+  float: left;
+}
+
+.container p{
+  font-size:18px;
+  text-align:justify;
+  margin-left: 400px;
+  width: 700px;
+  height: 100px;
+	padding: 0px;
+}
+
+.button-save{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  margin-left:265px;
+}
+
+.button-rate{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  margin-left:265px;
+
+}
+
+.button-update{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  margin-left:0px;
+}
+
+.button-delete{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  margin-left:0px;
+}
+
+.button-back{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  float: right;
+  margin-right: 420px;
+  margin-top: 25px;
+}
+
+.button-confirmRating{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+  margin-top:40px;
+  margin-left: 30px;
+}
+
+.button-readIt{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: #80002a;
+  color: white;
+  padding: 3px 9px 3px 9px;
+  border-radius:4px;
+
+}
+
+.rating{
+  margin-left:400px;
+	margin-top:1.5px;
+}
+
+.checked{
+  color:orange;
+}
+
+.box{
+  font-family: 'Patrick Hand SC', sans-serif;
+  font-size:18px;
+  text-align:justify;
+  margin-right: 180px;
+  margin-top: 70px;
+  width: 650px;
+  height: 100px;
+	padding: 0px;
+  float: right;
+}
+
+.feedback-buttons{
+  margin-top:50px;
+  margin-left: 400px;
+}
+
+.feedbackRating{
+  display: flex;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 540px;
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+.feedbackRating input {
+   display: none;
+}
+
+.feedbackRating label {
+    cursor: pointer;
+    width: 25px;
+}
+
+.feedbackRating label:before{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #101010;
+}
+
+.feedbackRating label:after{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  color: orange;
+  top:0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.feedbackRating label:hover:after,
+.feedbackRating label:hover ~ label:after,
+.feedbackRating input:checked ~ label:after {
+  opacity: 1;
+}
+
+.loginbox{
+  width:480px;
+  height: 400px;
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 45%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transform: translate(-15%,-45%);
+  padding: 80px 50px;
+  background-image: url("http://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+
+.loginbox input[type=text],[type=password], select {
+  width: 95%;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  resize: vertical;
+  float: right;
+  margin-top: 30px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+.loginbox li{
+  font-size: 18px;
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-left: 90px;
+  margin-top: 0px;
+}
+
+.loginbox a{
+    color: white;
+    margin-left: 110px;
+}
+
+.avatar{
+  width:80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -25%;
+  margin-left: calc(38% - 38px);
+}
+
+.button-login{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 6px 15px 6px 15px;
+  border-radius:4px;
+  margin-left:150px;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.register_box{
+  width:700px;
+  height: 780px;
+  position:absolute;
+  margin-top: 24%;
+  margin-left: 42%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border-color: black;
+  border-style: solid;
+  transform: translate(-15%,-45%);
+  padding: 20px 40px;
+  overflow: auto;
+}
+
+.register_box li{
+  font-size: 13px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin-left:150px;
+  margin-top: 0px;
+}
+
+.register_box input[type=text],[type=password],[type=email],[type=number], select {
+  width: 95%;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  resize: vertical;
+  float: right;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+.button-register{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 6px 15px 6px 15px;
+  border-radius:4px;
+  margin-left:240px;
+  margin-top: 40px;
+}
+
+.addnewItem{
+  width:550px;
+  height: 450px;
+  position:absolute;
+  margin-top: 16%;
+  margin-left: 42%;
+  background-image: url("https://image.freepik.com/free-vector/blue-3d-modern-background-design_53876-88247.jpg");
+  background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+  transform: translate(-15%,-45%);
+  padding: 20px 40px;
+  overflow: hidden;
+}
+
+.addnewItem input[type=text],textarea, select {
+  width: 95%;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  resize: vertical;
+  float: right;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 15px;
+}
+
+textarea{
+  height: 80px;
+  margin-top: 30px;
+}
+
+select {
+  width: 98%;
+  padding: 8px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+.addnewItem h4{
+  margin-left: 13px;
+  margin-top: 110px;
+  font-family: 'Montserrat', sans-serif;
+  color: black;
+  font-size: 15px;
+
+}
+
+#ratingid{
+  margin-left: 200px;
+  margin-top: 0px;
+
+}
+
+.button-additem{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  padding: 8px 25px 8px 25px;
+  border-radius:4px;
+  margin-left:240px;
+  margin-top: 40px;
+}

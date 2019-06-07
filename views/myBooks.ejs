@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" href="/assets/stylesheet/styles.css" type="text/css">
+
+		<meta charset="UTF-8">
+		<title>My Books</title>
+	</head>
+
+	<body>
+		<% include partials/header.ejs %>
+
+		<% include partials/user-navigation.ejs %>
+
+		<div class="main">
+			<h3>Your Books!</h3>
+
+			<table class="table table-hover">
+				<thead>
+				<tr>
+					<th>Books</th>
+					<th>Category</th>
+					<th>My Rating</th>
+					<th>Read it</th>
+					<th></th>
+					<th></th>
+				</tr>
+				</thead>
+
+				<tbody>
+						<% for(var j=0; j<UserItems.length; j++) {%>
+				<tr>
+					<td><%= UserItems[j].itemName %></td>
+					<td><%= UserItems[j].catalogCategory %></td>
+
+					<td>
+						<% for(let i=0;i<UserItems[j].Rating;i++){%>
+                <span class="fa fa-star checked"></span>
+              <%}%>
+
+              <% for(let i=0;i<5-UserItems[j].Rating;i++){%>
+                  <span class="fa fa-star"></span>
+              <%}%>
+					</td>
+
+					<td>
+						<% if(UserItems[j].ReadIt == true){ %>
+						<input type="checkbox" checked="checked" disabled>
+						<% } else { %>
+						<input type="checkbox" disabled >
+						<% } %>
+					</td>
+
+					<td>
+						<form id="myItems" action="/profile/myBooks" method="post">
+							<input type="hidden" name="itemCode" value="<%= UserItems[j].itemCode %>">
+							<input type="hidden" name="itemName" value="<%= UserItems[j].itemName %>">
+							<input type="hidden" name="Category" value="<%= UserItems[j].catalogCategory %>">
+							<input type="hidden" name="Rating" value="<%= UserItems[j].Rating %>">
+							<input type="hidden" name="ReadIt" value="<%= UserItems[j].ReadIt %>">
+
+							<button class="button-update" type="submit" name="action" value="updateProfile"> Update</button>
+							<button class="button-delete" type="submit" name="action" value="deleteItem"> Delete</button>
+						</form>
+					</td>
+
+				</tr>
+				<%}%>
+
+				</tbody>
+			</table>
+
+			<p>
+				<i class="fa fa-pencil-square" aria-hidden="true"></i> indicates that this blog or article is written by you.<br>
+				click<a href="/addItem"> here </a>to share your blog or article!
+			</p>
+		</div>
+
+		<% include partials/site-navigation.ejs %>
+
+		<% include partials/footer.ejs %>
+
+	</body>
+</html>

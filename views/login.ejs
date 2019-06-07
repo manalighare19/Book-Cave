@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheet/styles.css" type="text/css">
+
+    <meta charset="UTF-8">
+    <title>Book Cave</title>
+	</head>
+
+	<body>
+    <% include partials/header.ejs %>
+
+    <% include partials/user-navigation.ejs %>
+
+
+		<div class="loginbox">
+      <img src="../assets/images/user.png" class="avatar" alt="Login image">
+			<form id="Login_id" action="/profile/signin" method="post">
+        <input type="text" name="Username" value="" placeholder=" Username"><br><br>
+        <input type="password" name="Password" value="" placeholder=" Password"><br><br>
+        <button class="button-login" type="submit" name="action" value="signIn">Login</button>
+      </form>
+        <a href="/register">New User? Register here.</a>
+      <% if(errors){ %>
+        <section>
+          <ul>
+            <% for(var i=0; i<errors.length; i++){ %>
+            <li><%=errors[i].msg%></li>
+          <%}%>
+          </ul>
+        </section>
+     <% } %>
+    </div>
+
+    <% include partials/site-navigation.ejs %>
+
+    <% include partials/footer.ejs %>
+	</body>
+
+</html>

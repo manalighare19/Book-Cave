@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Cousine" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Patrick+Hand+SC" rel="stylesheet">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/assets/stylesheet/styles.css" type="text/css">
+
+		<meta charset="UTF-8">
+			<title>Items</title>
+	</head>
+
+	<body>
+		<% include partials/header.ejs %>
+
+		<% include partials/user-navigation.ejs %>
+
+		<% include partials/site-navigation.ejs %>
+
+		<div class="container">
+			<h5><a href="/home">Home</a> > <a href="/categories">Categories</a> > <a href="#"><%= data.item.itemName %></a> </h5>
+
+			<img src='<%= data.item.imgUrl %>' alt="No image found"/>
+			<a href="/categories" class="button button-back"><i class="fa fa-chevron-circle-left" aria-hidden="true"></i> Back</a>
+
+			<h3><strong><%= data.item.itemName%></strong></h3>
+			<h4>by <%= data.item.author %> </h4>
+			<h4><%= data.item.catalogCategory %></h4>
+
+			<div class="rating">
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star checked"></span>
+				<span class="fa fa-star"></span>
+				<span class="fa fa-star"></span>
+			</div>
+
+
+			<p><%= data.item.description %></p>
+
+			<form id="form-saveIt" method="post" action="/profile/myBooks">
+				<input type="hidden" name="itemCode" value="<%= data.item.itemCode %>">
+				<input type="hidden" name="itemName" value="<%= data.item.itemName %>">
+				<input type="hidden" name="Rating" value="<%= data.item.Rating %>">
+				<input type="hidden" name="Category" value="<%= data.item.catalogCategory %>">
+				<button class=" button-save" type="submit" name="action" value="Save"><i class="fa fa-heart" aria-hidden="true"></i> Save it</button>
+			</form>
+
+			<form id="form-rateIt" method="post" action="/profile/myBooks">
+				<input type="hidden" name="itemCode" value="<%= data.item.itemCode %>">
+				<button class=" button-rate" type="submit" name="action" value="rateIt"><i class="fa fa-star" aria-hidden="true"></i> Rate it</button>
+			</form>
+
+		</div>
+
+		<% include partials/footer.ejs %>
+
+	</body>
+	</html>
